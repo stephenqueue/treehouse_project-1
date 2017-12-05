@@ -1,3 +1,6 @@
+/* An array of 5 objects that each contain 2 pairs of property and values 
+that have both a quote and a source. */
+
 var quotes = [
   {
   quote : "Don't cry because it's over, smile because it happened.",

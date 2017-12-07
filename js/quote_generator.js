@@ -11,18 +11,6 @@ function getRandomQuote() {
   return chosenQuote;
 };
 
-// selects random background color for where this function is called.
-
-function getRandomBgColor() {
-  var randomColor = ['#FF0000','#008000','#008080','#000080','#800080','BA33FF','539BBD'];
-  var randomColorIndex = Math.floor(Math.random() * randomColor.length);
-  var selectedRandomColor = randomColor[randomColorIndex];
-  
-// Tracks the ID element within the index.html to apply random background color whenever button is clicked.
-  
-  document.getElementById("loadQuote").style.backgroundColor = selectedRandomColor;
-}
-
 // Prints out the randomly chosen quote onto the page.
 
 function printQuote() {
@@ -34,6 +22,16 @@ the quote and the source of the quote from the array*/
   var htmlQuote = '';
   htmlQuote += '<p class="quote">' + quote.quote + '</p>';
   htmlQuote += '<p class="source">' + quote.source + '</p>';
+  if ( quote.citation ) {
+    htmlQuote += '<span class="citation">' + quote.citation + '</span>';
+   } else {
+    htmlQuote += '';
+   }
+  if ( quote.year ) {
+    htmlQuote += '<span class="year">' + quote.year + '</span>';
+  } else {
+    htmlQuote += '';
+  }
 
 /* the document.getElementById function will track the ID of quote-box within the
 index.html page and apply the random quote that printQuote is able to provide */  
@@ -44,4 +42,17 @@ index.html page and apply the random quote that printQuote is able to provide */
 apply the random background color each time the button is clicked. */  
   
   return getRandomBgColor();
+}
+
+// selects random background color for where this function is called.
+
+function getRandomBgColor() {
+  var red = Math.floor(Math.random() * 256);
+  var green = Math.floor(Math.random() * 256);
+  var blue = Math.floor(Math.random() * 256);
+  var rgbColor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
+  
+// Tracks the ID element within the index.html to apply random background color whenever button is clicked.
+  
+  document.body.style.backgroundColor = rgbColor;
 }

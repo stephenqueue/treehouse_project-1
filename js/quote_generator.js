@@ -52,7 +52,7 @@ function getRandomBgColor() {
   var blue = Math.floor(Math.random() * 256);
   var rgbColor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
   
-// Tracks the ID element within the index.html to apply random background color whenever button is clicked.
+// Tracks the body element within the index.html to apply random background color whenever button is clicked.
   
   document.body.style.backgroundColor = rgbColor;
 }

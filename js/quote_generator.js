@@ -32,6 +32,11 @@ the quote and the source of the quote from the array*/
   } else {
     htmlQuote += '';
   }
+    if ( quote.tags ) {
+    htmlQuote += '<span class="tags">' + quote.tags + '</span>';
+  } else {
+    htmlQuote += '';
+  }
 
 /* the document.getElementById function will track the ID of quote-box within the
 index.html page and apply the random quote that printQuote is able to provide */  

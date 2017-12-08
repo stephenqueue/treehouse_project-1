@@ -7,7 +7,7 @@ var quotes = [
   source : "Dr. Seuss"
   },
   {
-  quote : "Be yourself; everyone else if already taken.",
+  quote : "Be yourself; everyone else is already taken.",
   source : "Oscar Wilde"
   },
   {

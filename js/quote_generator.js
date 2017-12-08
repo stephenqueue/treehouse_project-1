@@ -11,6 +11,10 @@ function getRandomQuote() {
   return chosenQuote;
 };
 
+// Calls the printQuote function to reset a new quote to the page every 30 seconds
+
+window.setInterval(printQuote, 30000);
+
 // Prints out the randomly chosen quote onto the page.
 
 function printQuote() {

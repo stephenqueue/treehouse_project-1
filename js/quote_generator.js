@@ -5,9 +5,9 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 
 // Creates a function that selects a random quote from quotes array of objects. 
 
-function getRandomQuote() {
-  var randomQuote = Math.floor(Math.random() * quotes.length);
-  var chosenQuote = quotes[randomQuote];
+const getRandomQuote = () => {
+  let randomQuote = Math.floor(Math.random() * quotes.length);
+  let chosenQuote = quotes[randomQuote];
   return chosenQuote;
 };
 
@@ -18,12 +18,12 @@ window.setInterval(printQuote, 30000);
 // Prints out the randomly chosen quote onto the page.
 
 function printQuote() {
-  var quote = getRandomQuote();
+  let quote = getRandomQuote();
   
 /* printQuote will convert the htmlQuote string below into two paragraphs, specifying
 the quote and the source of the quote from the array*/
   
-  var htmlQuote = '';
+  let htmlQuote = '';
   htmlQuote += '<p class="quote">' + quote.quote + '</p>';
   htmlQuote += '<p class="source">' + quote.source + '</p>';
   if ( quote.citation ) {
@@ -55,11 +55,11 @@ apply the random background color each time the button is clicked. */
 
 // selects random background color for where this function is called.
 
-function getRandomBgColor() {
-  var red = Math.floor(Math.random() * 256);
-  var green = Math.floor(Math.random() * 256);
-  var blue = Math.floor(Math.random() * 256);
-  var rgbColor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
+const getRandomBgColor = () => {
+  let red = Math.floor(Math.random() * 256);
+  let green = Math.floor(Math.random() * 256);
+  let blue = Math.floor(Math.random() * 256);
+  let rgbColor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
   
 // Tracks the body element within the index.html to apply random background color whenever button is clicked.
   
